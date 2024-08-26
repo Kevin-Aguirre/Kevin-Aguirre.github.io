@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.30cf45de.css",
-    "main.js": "/static/js/main.4a0f2a00.js",
-    "static/media/headshot.jpg": "/static/media/headshot.23ccf265f545232f4b95.jpg",
-    "static/media/leetcode-scraper-ss.png": "/static/media/leetcode-scraper-ss.8d4c61af102371778826.png",
-    "static/media/mail.png": "/static/media/mail.1b82ca4bb7584c98e9ea.png",
-    "static/media/linkedin-logo.png": "/static/media/linkedin-logo.893b5af5a73acb231f89.png",
+    "main.css": "/static/css/main.7b057a0b.css",
+    "main.js": "/static/js/main.245f212d.js",
+    "static/media/headshot.png": "/static/media/headshot.4b087da91679f3bd163f.png",
+    "static/media/censored_resume.pdf": "/static/media/censored_resume.e77e17aa5068afbaf54a.pdf",
+    "static/media/loading.gif": "/static/media/loading.b75b820d5677a45b26bd.gif",
     "index.html": "/index.html",
-    "main.30cf45de.css.map": "/static/css/main.30cf45de.css.map",
-    "main.4a0f2a00.js.map": "/static/js/main.4a0f2a00.js.map"
+    "main.7b057a0b.css.map": "/static/css/main.7b057a0b.css.map",
+    "main.245f212d.js.map": "/static/js/main.245f212d.js.map"
   },
   "entrypoints": [
-    "static/css/main.30cf45de.css",
-    "static/js/main.4a0f2a00.js"
+    "static/css/main.7b057a0b.css",
+    "static/js/main.245f212d.js"
   ]
 }
