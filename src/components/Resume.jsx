@@ -10,6 +10,7 @@ export default function Resume() {
             </h1>
             <hr className="my-8"/>
             <iframe 
+                title="resume"
                 src={require("../documents/censored_resume.pdf")}
                 style={{
                     height: '1400px'

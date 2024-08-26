@@ -15,16 +15,17 @@ export default function Project ({name, images, videoLink, githubLink, descripti
                 {name}  
             </h1>
             <img 
+                alt="View Project Screenshots"
                 className='cursor-pointer max-w-full max-h-96' 
                 src={images[0]}
                 onClick={handleOpenModal}
             >
             </img>
             <div className='m-0 flex flex-col items-center'>
-                <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 mt-2 mb-1' href={videoLink} target='_blank'>
+                <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 mt-2 mb-1' href={videoLink} rel="noreferrer" target='_blank'>
                     Video Demo
                 </a>
-                <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 my-2' href={githubLink} target='_blank'>
+                <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 my-2' rel="noreferrer" href={githubLink} target='_blank'>
                     Source Code
                 </a>
             </div>

@@ -5,17 +5,36 @@ import Loading from "./Loading";
 const GITHUB_USERNAME = "Kevin-Aguirre"
 
 function parseReadme(md) {
+  console.log(md);
   const lines = md.split('\n');
+  
   const title = lines[0].replace('#', '').trim();
+  
   const description = lines[1].trim();
-  const videoLine = lines[lines.indexOf('### Video Demo') + 1];
+  
+  const videoLine = lines[lines.indexOf('### Video Demo') + 1]; 
   let videoLink = videoLine.match(/\[Video\]\((.*?)\)/);
   videoLink = videoLink ? videoLink[1] : '';
+
+  console.log(lines);
+  const portPropsLine = lines.indexOf('## Portfolio Properties')
+  
+  
+  const showOnPortfolioLine = lines[portPropsLine + 1];
+  
+  const showOnPortfolio = showOnPortfolioLine.split('=')[1].trim() === 'true' ? true : false;
+
+  const screenshotsPathLine = lines[portPropsLine + 2];
+  const screenshotsPath = screenshotsPathLine.split('=')[1].trim();
+
+
 
   return {
     title,
     description,
-    videoLink
+    videoLink,
+    showOnPortfolio,
+    screenshotsPath
   };
 }
 
@@ -44,55 +63,41 @@ async function fetchImages(repo, path) {
 async function fetchRepos() {
   let allProjectData = []
 
-
   const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`, {
-    headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
+    // headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
   })
   const repos = await reposResponse.json()
+  const activeRepos = repos.filter(repo => !repo.archived)
 
-
-  for (const repo of repos) {
-
-    let repoPropertiesRes
-    let repoPropertiesData
-    let propertiesContent
-
+  for (const repo of activeRepos) {
+    
+    let readmeRes, readmeData, readmeContent
     try {
-      repoPropertiesRes = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repo.name}/contents/portfolio.properties`, {
-        headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
+      readmeRes = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repo.name}/contents/README.md`, {
+        // headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}        
       })
-      repoPropertiesData = await repoPropertiesRes.json()
-      propertiesContent = atob(repoPropertiesData.content.replace(/\n/g, ''));
+      readmeData = await readmeRes.json()
+      readmeContent = atob(readmeData.content.replace(/\n/g, ''))
     } catch(e) {
-      console.log(`Could not find portfolio.properties in ${repo.name}`);
-      continue
+      console.log(`Encountered an error fetching README.md for ${repo.name}`);
+      continue;
     }
 
+    let readmeJson
+    try {
+      readmeJson = parseReadme(readmeContent)
+    } catch(e) {
+      console.log(`README.md for ${repo.name} is not formtted as expected.`);
+      continue;
+    }
 
-    if (propertiesContent.includes('showOnPortfolio=true')) {
+    if (readmeJson.showOnPortfolio) {
 
-      let readMeRes
-      let readMeData
-      let readMeContent
-      try {
-        readMeRes = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repo.name}/contents/README.md`, {
-          headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
-        })
-        readMeData = await readMeRes.json()
-        readMeContent = atob(readMeData.content.replace(/\n/g, ''))
-      } catch(e) {
-        console.log(`Could not find README.md in ${repo.name}`);
-      }
-
-      let pathLine = propertiesContent.split('\n')[1]
-      const path = pathLine.replace('path=', '').trim()
-
-      let projectData = parseReadme(readMeContent)      
-      projectData.githubLink = `https://github.com/${GITHUB_USERNAME}/${repo.name}`
-      projectData.images = await fetchImages(repo.name, path)
+      readmeJson.githubLink = `https://github.com/${GITHUB_USERNAME}/${repo.name}`
+      readmeJson.images = await fetchImages(repo.name, readmeJson.screenshotsPath)
 
 
-      allProjectData.push(projectData)
+      allProjectData.push(readmeJson)
     }   
   }
 

@@ -9,7 +9,7 @@ function getDescFromReadme(md) {
 
 async function fetchDescription() {
     const descRes = await fetch("https://api.github.com/repos/Kevin-Aguirre/Kevin-Aguirre/contents/README.md", {
-        headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
+        // headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
     })
     const descData = await descRes.json()
     const descContent = atob(descData.content.replace(/\n/g, ''));
@@ -37,7 +37,7 @@ export default function AboutMe() {
                 About Me
             </h1>
             <div className='flex flex-row justify-between bg-gray-700 rounded-bl rounded-br p-2'>
-                <img className='max-w-full rounded-full h-52' src={require('../images/headshot.png')}></img>
+                <img className='max-w-full rounded-full h-52' alt='failed to load headshot' src={require('../images/headshot.png')}></img>
                 <div className='px-4'>
                 {
                     loading 
