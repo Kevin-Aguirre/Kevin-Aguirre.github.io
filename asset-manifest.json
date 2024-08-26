@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.7b057a0b.css",
-    "main.js": "/static/js/main.245f212d.js",
+    "main.js": "/static/js/main.5ddba015.js",
     "static/media/headshot.png": "/static/media/headshot.4b087da91679f3bd163f.png",
     "static/media/censored_resume.pdf": "/static/media/censored_resume.e77e17aa5068afbaf54a.pdf",
     "static/media/loading.gif": "/static/media/loading.b75b820d5677a45b26bd.gif",
     "index.html": "/index.html",
     "main.7b057a0b.css.map": "/static/css/main.7b057a0b.css.map",
-    "main.245f212d.js.map": "/static/js/main.245f212d.js.map"
+    "main.5ddba015.js.map": "/static/js/main.5ddba015.js.map"
   },
   "entrypoints": [
     "static/css/main.7b057a0b.css",
-    "static/js/main.245f212d.js"
+    "static/js/main.5ddba015.js"
   ]
 }
