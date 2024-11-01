@@ -7,9 +7,9 @@ export default function Navbar() {
             <ul>
                 <a className='mr-8' href='#about'>About Me</a>
                 <a className='mr-8' href='#projects'>Projects</a>
+                <a className='mr-8' href='#experience'>Experience</a>
                 <a className='mr-8' href='#resume'>Resume</a>
                 <a className='mr-8' href='#contactme'>Contact Me</a>
-                
             </ul>
         </nav>
     )

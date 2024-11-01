@@ -22,8 +22,8 @@ function App()  {
       <AllProjects
         isAuthenticated={AUTHENTICATED}
       />
-      <Resume/>
       <Experience/>
+      <Resume/>
       <ContactMe/>
       <Footer/>
     </div>

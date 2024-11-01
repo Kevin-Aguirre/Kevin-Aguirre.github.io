@@ -6,8 +6,14 @@ const experiences = [
     {
         time: "Fall 2022",
         title: "Enrolled in College",
-        description: "In Fall 2022 I enrolled in a Computer Science B.S. program at New York University, Tandon School of Engineering. I joined a VIP (Vertiaclly Integrated Projects) team called High Speed Research Network where I developed unit tests using Jest to test frontend components and server functions.",
+        description: "In Fall 2022 I enrolled in a Computer Science B.S. program at New York University, Tandon School of Engineering.",
         imagePath: require("../images/nyu2.png")
+    }, 
+    {
+        time: "Fall 2023",
+        title: "Joined NYU HSRN VIP",
+        description: "I joined the NYU HSRN (High Speed Research Network) VIP team where I developed unit tests using Jest to test frontend components and server functions, and did full-stack web development. ",
+        imagePath: require("../images/hsrn-vip.jpeg")
     },
     {
         time: "Summer 2024",
@@ -18,8 +24,14 @@ const experiences = [
     {
         time: "Summer 2024",
         title: "Course Assistant",
-        description: "I was a Course Assistant for NYU's Center for K12 Stem Education. I assisted in a course called SoSC (Science of Smart Cities) where I taught students about topics such as Transportataion, Infrastructure, Energy, and Wireless Communication. I taught students how to create Arduino circuits that they implemented in a city with a focus on sustainability.",
+        description: "I was a Course Assistant for NYU's Center for K12 Stem Education. I assisted in two courses named SoSC (Science of Smart Cities) and CACTUS (Code, Arduino, CAD, Tech, User Systems) where I taught students about how to create Arduino circuits and develop CAD models. In this context we taught about various city-realted topics such as  Transportataion, Infrastructure, Energy, and Wireless Communication and how these topics can be related into various fields of engineering.",
         imagePath: require("../images/k12.png")
+    }, 
+    {
+        time: "Fall 2024",
+        title: "Peer Tutor",
+        description: "I was a Peer Tutor for the NYU TRIO Scholars Program. I conducted one-on-one tutoring for various courses such as Introduction to Programming & Problem Solving, Data Structures & Algorithms, and Discrete Mathematics.",
+        imagePath: require("../images/trio.png")
     }
 ]
 
