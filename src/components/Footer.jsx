@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className='bg-gray-700'>
             <div className='pt-6 pb-6 ml-auto mr-auto flex flex-row justify-around max-w-xs'>
-            <a href='google.com'>
+            <a href='mailto:kaa9659@nyu.edu'>
                 <img alt='E-mail' className='max-h-8 max-w-10' src={require('../images/mail.png')}>
                 </img>
             </a>

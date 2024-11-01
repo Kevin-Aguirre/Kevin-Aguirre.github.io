@@ -1,29 +1,15 @@
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
+import { fetchDescription } from '../lib';
 
-function getDescFromReadme(md) {
-    const mdLines = md.split('\n')
-    const descIndex = mdLines.indexOf('## About Me') + 1
-    return mdLines[descIndex]
-}
 
-async function fetchDescription() {
-    const descRes = await fetch("https://api.github.com/repos/Kevin-Aguirre/Kevin-Aguirre/contents/README.md", {
-        // headers: {'Authorization' : `token ${process.env.REACT_APP_GITHUB_TOKEN}`}
-    })
-    const descData = await descRes.json()
-    const descContent = atob(descData.content.replace(/\n/g, ''));
-    return getDescFromReadme(descContent)    
-
-}
-
-export default function AboutMe() {
+export default function AboutMe({isAuthenticated}) {
     const [loading, setLoading] = useState(true)
     const [description, setDescription] = useState('')
 
     useEffect(() => {
         const loadDescription = async () => {
-            const desc = await fetchDescription()
+            const desc = await fetchDescription(isAuthenticated)
             setDescription(desc)
             setLoading(false);
         }

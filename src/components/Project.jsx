@@ -22,9 +22,12 @@ export default function Project ({name, images, videoLink, githubLink, descripti
             >
             </img>
             <div className='m-0 flex flex-col items-center'>
-                <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 mt-2 mb-1' href={videoLink} rel="noreferrer" target='_blank'>
-                    Video Demo
-                </a>
+                {
+                    videoLink && 
+                    <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 mt-2 mb-1' href={videoLink} rel="noreferrer" target='_blank'>
+                        Video Demo
+                    </a>
+                }
                 <a className='no-underline bg-gray-800 text-white font-bold w-11/12 mx-auto block text-center rounded text-xl py-2 my-2' rel="noreferrer" href={githubLink} target='_blank'>
                     Source Code
                 </a>

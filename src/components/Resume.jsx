@@ -13,10 +13,11 @@ export default function Resume() {
                 title="resume"
                 src={require("../documents/censored_resume.pdf")}
                 style={{
-                    height: '1400px'
+                    minHeight: '70vh', // Adjust the minHeight as needed
+                    height: '1400px',    // Set height in vh units to make it responsive
+                    width: '100%',     // Ensure the width is always 100% of the parent                
                 }}
             />            
         </section>
     )
-
 }
