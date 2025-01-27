@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.7a567d50.css",
-    "main.js": "/static/js/main.8d1d3f2d.js",
+    "main.js": "/static/js/main.d314c9e0.js",
     "static/media/headshot.png": "/static/media/headshot.4b087da91679f3bd163f.png",
     "static/media/censored_resume.pdf": "/static/media/censored_resume.49ec1652789ff7f050c5.pdf",
     "static/media/nyu2.png": "/static/media/nyu2.5a40b802b06e14b253ca.png",
     "static/media/k12.png": "/static/media/k12.79b9386c74cab6c05607.png",
     "index.html": "/index.html",
     "main.7a567d50.css.map": "/static/css/main.7a567d50.css.map",
-    "main.8d1d3f2d.js.map": "/static/js/main.8d1d3f2d.js.map"
+    "main.d314c9e0.js.map": "/static/js/main.d314c9e0.js.map"
   },
   "entrypoints": [
     "static/css/main.7a567d50.css",
-    "static/js/main.8d1d3f2d.js"
+    "static/js/main.d314c9e0.js"
   ]
 }
