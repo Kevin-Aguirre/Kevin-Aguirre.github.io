@@ -73,7 +73,7 @@ const experiences = [
         imagePath: require("../images/ssl_lock.png")
     }, 
     {
-        time: "Summer 2024",
+        time: "Summer 2025",
         title: "Software Engineering Intern",
         description: (
             <div>
