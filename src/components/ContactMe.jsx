@@ -1,4 +1,3 @@
-import { clear } from "@testing-library/user-event/dist/clear";
 import { useState } from "react";
 
 export default function ContactMe() {
@@ -47,7 +46,6 @@ export default function ContactMe() {
 
     }
 
-
     const clearForm = () => {
         setForm({
             userEmail: "",
@@ -94,7 +92,7 @@ export default function ContactMe() {
                     placeholder="Send me a message!"
                     className="bg-gray-900 text-white rounded p-4 my-2 text-3xl min-h-80"
                 />
-                <button className="w-full py-4 my-2 rounded text-white text-3xl font-bold bg-emerald-800" onClick={handleSubmit}>
+                <button className="w-full py-4 my-2 rounded text-white text-3xl font-bold bg-emerald-600" onClick={handleSubmit}>
                     Send Email
                 </button>
             </form>
