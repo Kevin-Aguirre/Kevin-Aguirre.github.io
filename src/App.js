@@ -1,31 +1,23 @@
 import Navbar from "./components/Navbar";
 
+import Introduction from "./components/Introduction"
 import AboutMe from "./components/AboutMe";
 import AllProjects from "./components/AllProjects";
-
 import Experience from "./components/Experience";
 import Resume from "./components/Resume";
-import ContactMe from "./components/ContactMe"
-
-import Footer from "./components/Footer";
-import {AUTHENTICATED} from "./constants";
-
 
 function App()  {
 
   return (
-    <div>
+    <div className="bg-indigo-950">
       <Navbar/>
-      <AboutMe
-        isAuthenticated={AUTHENTICATED}
-      />
-      <AllProjects
-        isAuthenticated={AUTHENTICATED}
-      />
-      <Experience/>
-      <Resume/>
-      <ContactMe/>
-      <Footer/>
+      <div className="px-20">
+        <Introduction/>
+        <AboutMe/>
+        <AllProjects/>
+        <Experience/>
+        <Resume/>
+      </div>
     </div>
 
   );

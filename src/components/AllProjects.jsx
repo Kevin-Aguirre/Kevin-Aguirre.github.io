@@ -60,7 +60,7 @@ export default function AllProjects() {
 
 
   return (
-    <section className='px-20 py-10 border-t-2 border-solid border-white bg-indigo-950' id='projects'>
+    <section className='py-10' id='projects'>
         <div className='flex flex-col'>
           <h1 className='p-5 bg-gray-900 text-center font-bold text-white text-4xl'>
             Projects

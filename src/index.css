@@ -8,3 +8,35 @@ html {
   scroll-behavior: smooth;
 }
 
+.typed-name-div {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: fit-content;
+}
+
+.typed-name-p {
+  font-size: 5em;
+  letter-spacing: 10px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  width: '100%';
+  overflow: hidden;
+  animation: 
+    typing 2s steps(13), 
+    cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+  50% { border-color: transparent }
+}
+
+/* typing effect */
+@keyframes typing {
+  from {width: 0}
+}

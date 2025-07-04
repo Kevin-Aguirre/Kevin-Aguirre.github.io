@@ -91,7 +91,6 @@ function EmptySpace() {
 }
 
 function ExperienceCard({time, title, imagePath, children}) {
-
     return (
         <div className="w-80 flex flex-col items-left flex-grow rounded">
             <div className="flex flex-row items-left bg-gray-900 items-center">
@@ -158,15 +157,15 @@ export default function Experience() {
 
 
     return (
-        <section className='px-20 py-10 border-t-2 border-solid border-white bg-indigo-950 flex flex-col' id="experience">
+        <section className='py-10 flex flex-col' id="experience">
             
-            <h1 className="text-center text-5xl font-bold text-white inline-block border border-solid border-white border-4 py-4 px-4 rounded mx-auto">
+            <h1 className="text-center text-5xl font-bold text-white inline-block border-solid border-white border-4 py-4 px-4 rounded mx-auto">
                 Experiences
             </h1>
             <div className="flex flex-col items-center justify-center">
                 {experienceElements}
             </div>
-            <h1 className="text-center text-5xl font-bold text-white inline-block border border-solid border-white border-4 py-4 px-4 rounded mx-auto">
+            <h1 className="text-center text-5xl font-bold text-white inline-block border-solid border-white border-4 py-4 px-4 rounded mx-auto">
              to be continued :)
             </h1>
         </section>
