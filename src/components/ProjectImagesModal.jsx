@@ -24,17 +24,17 @@ export default function ProjectImagesModal({isOpen, handleClose, project}) {
 
     return (
         <div
-            className={`fixed inset-0 flex flex-col items-center justify-center bg-black/80 transition-opacity duration-500 ease-in-out ${
+            className={`py-20 fixed inset-0 flex flex-col items-center justify-center bg-black/80 transition-opacity duration-500 ease-in-out ${
                 isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
         >
-            <div className={`mx-60 transform transition-transform duration-500 ease-in-out ${isOpen ? "scale-100" : "scale-90"}`}>
-                <h1 className="pb-6 text-white font-bold text-5xl text-center">
+            <div className={`p-3 bg-red-200 mx-60 transform transition-transform duration-500 ease-in-out ${isOpen ? "scale-100" : "scale-90"}`}>
+                <h1 className="pb-6 text-white font-bold text-4xl text-center">
                     {project.title}
                 </h1>
                 <div className="flex flex-row items-center justify-center">
                     <button className="text-white font-bold text-8xl text-center px-8" onClick={handleLeftClick}>{'<'}</button>
-                    <img className="w-auto h-[700px]" src={project.images[currentImageIndex]} alt="modalopen!!!!" />
+                    <img className="w-auto h-[40rem]" src={project.images[currentImageIndex]} alt="modalopen!!!!" />
                     <button className="text-white font-bold text-8xl text-center px-8" onClick={handleRightClick}>{'>'}</button>               
                 </div>
                 <div className="pt-3 pb-5 text-white font-bold text-center text-3xl">

@@ -8,10 +8,10 @@ export default function Resume() {
             <hr className="my-8"/>
             <iframe 
                 title="resume"
-                src={require("../documents/censored_resume.pdf")}
+                src={require("../documents/resume.pdf")}
                 style={{
                     minHeight: '70vh',
-                    height: '1400px',
+                    height: '70rem',
                     width: '100%',
                 }}
             />            
